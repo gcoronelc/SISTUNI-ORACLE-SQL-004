@@ -1,4 +1,4 @@
-![ORACLE SQL](https://raw.githubusercontent.com/gcoronelc/SISTUNI-ORACLE-SQL-004/master/img/ORACLE-SQL-004.jpg)
+![ORACLE SQL](https://raw.githubusercontent.com/gcoronelc/SISTUNI-ORACLE-SQL-004/master/img/ORACLE-SQL-004-2.jpg)
 
 
 # ORACLE SQL
