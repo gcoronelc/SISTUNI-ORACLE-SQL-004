@@ -1,0 +1,3 @@
+CLASE 01
+- Instalar GIT for Windows
+- Clonar el repositorio
