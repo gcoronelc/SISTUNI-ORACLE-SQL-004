@@ -1,3 +1,13 @@
 CLASE 01
+================================================
 - Instalar GIT for Windows
 - Clonar el repositorio
+- Instalar Oracle 11
+- Introducción a Oracle
+- Herramientas Cliente
+- Creación de un esquema basico
+- Esquemas Ejemplo
+- Consultas simples
+
+
+
