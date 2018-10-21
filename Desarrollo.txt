@@ -8,6 +8,6 @@ CLASE 01
 - Creación de un esquema basico
 - Esquemas Ejemplo
 - Consultas simples
-
+- Tabla DUAL
 
 
