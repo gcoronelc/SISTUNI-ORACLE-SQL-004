@@ -9,5 +9,12 @@ CLASE 01
 - Esquemas Ejemplo
 - Consultas simples
 - Tabla DUAL
+- Filtros
+
+- Ejercicios Propuestos
+- 01.- CONSULTAS A UNA TABLA
+- http://gcoronelc.blogspot.com/2018/09/oracle-sql-consultas-una-tabla.html
+- Bloque 01: Selección de Columnas
+- Bloque 02: Campos Calculados
 
 

@@ -53,7 +53,7 @@ WHERE iddepartamento = 102 AND sueldo >= 3000;
 
 -- Ejercicios Propuestos
 -- http://gcoronelc.blogspot.com/2018/09/oracle-sql-consultas-una-tabla.html
-
+-- 01.- CONSULTAS A UNA TABLA
 -- Bloque 01: Selección de Columnas
-
+-- Bloque 02: Campos Calculados
 

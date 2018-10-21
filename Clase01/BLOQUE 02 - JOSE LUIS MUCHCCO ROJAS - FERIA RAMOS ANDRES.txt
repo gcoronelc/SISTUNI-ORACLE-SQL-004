@@ -1,0 +1,25 @@
+
+
+--1
+SELECT * FROM EDUCA.CURSO;
+
+SELECT cur_matriculados AS CANTMATRICULADOS,
+CUR_MATRICULADOS / CUR_VACANTES * 100 AS PORCENTAJE  
+FROM EDUCA.CURSO;
+
+
+--2
+SELECT * FROM RECURSOS.EMPLEADO;
+
+SELECT concat(nombre,concat(' ',apellido))  FROM RECURSOS.EMPLEADO;
+
+--3
+SELECT cur_vacantes*cur_precio AS importe FROM educa.curso;
+
+--4.
+SELECT precio,stock,precio*stock AS importe FROM ventas.PRODUCTO;
+
+
+--5
+
+SELECT sueldo,(sueldo+sueldo*0.15) AS salario_proyectado FROM RECURSOS.EMPLEADO;
