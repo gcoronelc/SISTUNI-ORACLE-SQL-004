@@ -1,0 +1,24 @@
+
+--BLOQUE 7
+Desarrollar una sentencia SELECT para consultar los empleados que ingresaron a la empresa un mes de Enero. Esquemas SCOTT y HR.
+--SCOTT
+SELECT * FROM SCOTT.EMP WHERE TO_CHAR(HIREDATE,'MM')='01';
+
+--RECURSOS
+SELECT * FROM RECURSOS.EMPLEADO WHERE TO_CHAR(FECINGRESO,'MM')='01';
+
+INSERT INTO SCOTT.EMP(EMPNO,ENAME,HIREDATE) VALUES(4444,'GUSTAVO',TO_DATE('15/01/2018'));
+
+Desarrollar una sentencia SELECT para consultar las matriculas del último mes. Esquema EDUCA.
+
+SELECT * FROM EDUCA.MATRICULA 
+WHERE TO_CHAR(MAT_FECHA,'YYYY')='2018' AND TO_CHAR(MAT_FECHA,'MM')=(SELECT TO_CHAR(MAX(MAT_FECHA),'MM') FROM EDUCA.MATRICULA);
+
+
+SELECT * FROM EDUCA.MATRICULA 
+WHERE TO_CHAR(MAT_FECHA,'YYYYMM') 
+     	= (SELECT TO_CHAR(MAX(MAT_FECHA),'YYYYMM') FROM EDUCA.MATRICULA);
+
+
+Consultar los empleados que ingresaron a trabajar el primer trimestre del año 1981. Esquema SCOTT y HR
+SELECT * FROM EDUCA.MATRICULA WHERE TO_CHAR(MAT_FECHA,'YYYY')='2018' AND TO_CHAR(MAT_FECHA,'MM') IN ('01','02','05');
