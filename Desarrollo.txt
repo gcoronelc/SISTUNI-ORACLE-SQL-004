@@ -20,6 +20,13 @@ CLASE 01
 CLASE 02
 ================================================
 - Bloque 03: Operadores de Comparación
+- Bloque 04: Operadores Lógicos
+- Bloque 05: Operadores Especiales
+- Bloque 06: Valores nulos Nulos
+- Bloque 07: Fechas y Hora
+
+
+
 
 
 

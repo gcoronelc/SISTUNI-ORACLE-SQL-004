@@ -4,6 +4,12 @@ SELECT 5 + NULL FROM DUAL;
 
 SELECT '' AS ALGO FROM DUAL;
 
+SELECT x.*, NVL(X.COMM, 1000) CON_NVL, 
+	   NVL2(X.COMM,2000,3000) CON_NVL2
+FROM scott.emp x;
+
+
+
 
 -- 1
 -- Desarrollar una sentencia SELECT que permita averiguar 
