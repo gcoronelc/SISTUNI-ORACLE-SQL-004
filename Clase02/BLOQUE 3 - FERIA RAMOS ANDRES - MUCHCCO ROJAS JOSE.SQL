@@ -1,0 +1,19 @@
+--1
+SELECT * FROM scott.dept;
+SELECT * FROM scott.emp WHERE deptno=10;
+
+SELECT * FROM recursos.departamento;
+SELECT * FROM recursos.EMPLEADO WHERE IDDEPARTAMENTO=101;
+
+--2
+SELECT * FROM educa.curso WHERE CUR_MATRICULADOS=0;
+
+---3
+SELECT * FROM VENTAS.PRODUCTO WHERE PRECIO>50;
+
+--4
+SELECT * FROM RECURSOS.EMPLEADO WHERE sueldo>3000;
+
+--5
+SELECT * FROM eureka.moneda;
+SELECT * FROM eureka.cuenta WHERE chr_monecodigo=01;

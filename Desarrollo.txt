@@ -17,4 +17,9 @@ CLASE 01
 - Bloque 01: Selección de Columnas
 - Bloque 02: Campos Calculados
 
+CLASE 02
+================================================
+- Bloque 03: Operadores de Comparación
+
+
 
