@@ -27,7 +27,7 @@ CLASE 02
 - Bloque 08: Funciones Agregadas
 - Bloque 09: Group By
 - Bloque 10: HAVING
-
+- JOIN - ON
 
 
 
