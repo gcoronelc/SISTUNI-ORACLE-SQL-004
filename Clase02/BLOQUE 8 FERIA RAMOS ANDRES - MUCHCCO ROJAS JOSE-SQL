@@ -1,0 +1,56 @@
+--1)
+ --a)
+ SELECT * FROM SCOTT.EMP;
+ SELECT (sum(sal)+sum(nvl(comm,0))) AS Importe FROM scott.emp WHERE deptno=30;
+ --b)
+ SELECT * FROM RECURSOS.DEPARTAMENTO;
+ SELECT (sum(sueldo)+sum(nvl(comision,0))) AS Importe FROM recursos.empleado WHERE iddepartamento=103;
+
+--2)
+--a)
+--MAYOR SUELDO EN EL DEPARTAMENTO VENTAS CON ESQUEMA SCOTT
+
+SELECT MAX(SAL) AS MAYOR_SUELDO,MIN(SAL) AS MENOR_SUELDO FROM SCOTT.EMP WHERE DEPTNO=30;
+
+--b)
+--MAYOR SUELDO  EN EL DEPARTAMENTO VENTAS CON ESQUEMA RECURSOS
+
+SELECT MAX(SUELDO) AS MAYOR_SUELDO, MIN(SUELDO) AS MENOR_SUELDO FROM RECURSOS.EMPLEADO WHERE IDDEPARTAMENTO=103;
+
+
+--3)
+--PROMEDIO DE SALARIO DE LA EMPRESA, PARA EL ESQUEMA SCOTT
+SELECT ROUND(AVG(NVL(SAL,0))) AS PROMEDIO_DE_SALARIO FROM SCOTT.EMP;
+
+--PROMEDIO DE SALARIO DE LA EMPRESA, PARA EL ESQUEMA RECURSOS
+SELECT ROUND(AVG(SUELDO)) AS PROMEDIO_DE_SALARIO FROM RECURSOS.EMPLEADO;
+
+--4)
+--a)Se necesita saber la cantidad de empleados que hay en el departamento de ventas.ESQUEMA SCOTT
+
+SELECT DEPTNO,COUNT(ENAME) AS CANTIDAD FROM SCOTT.EMP WHERE DEPTNO=30 GROUP BY DEPTNO;
+
+--B)Se necesita saber la cantidad de empleados que hay en el departamento de ventas.ESQUEMA RECURSOS
+
+SELECT IDDEPARTAMENTO,COUNT(NOMBRE) FROM RECURSOS.EMPLEADO WHERE IDDEPARTAMENTO=103 GROUP BY IDDEPARTAMENTO;
+
+
+--5
+SELECT * FROM scott.dept;
+SELECT * FROM scott.emp WHERE deptno=30;
+SELECT sum(sal) AS Sin_Comision, (sum(sal)+sum(nvl(comm,0))) AS Con_Comision FROM scott.emp WHERE deptno=30;
+
+SELECT * FROM recursos.departamento;
+SELECT * FROM recursos.empleado WHERE IDDEPARTAMENTO=101;
+SELECT sum(sueldo) AS Sin_Comision, (sum(sueldo)+sum(nvl(comision,0))) AS Con_Comision FROM recursos.empleado WHERE iddepartamento=103;
+
+--6
+SELECT * FROM curso;
+SELECT sum(cur_matriculados) AS Cant_Matri, sum(cur_vacantes*cur_precio) AS Recaudacion FROM educa.CURSO WHERE CUR_NOMBRE='SQL Server Administración' ;
+
+--7
+
+-- CORREGIR
+
+SELECT * FROM curso;
+SELECT sum(cur_matriculados*cur_precio) AS Recaudacion FROM educa.CURSO WHERE CUR_NOMBRE='SQL Server Administración'; 

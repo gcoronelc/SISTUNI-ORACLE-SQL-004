@@ -1,0 +1,57 @@
+BLOQUE 9
+
+/8 *Desarrolle  una sentencia SELECT para encontrar el sueldo promedio por 
+departamento. Esquema SCOTT y RH. */
+
+SELECT DEPTNO, ROUND(AVG(SAL),3)  FROM SCOTT.EMP
+WHERE SAL IS NOT NULL
+GROUP BY DEPTNO
+
+SELECT IDDEPARTAMENTO, ROUND(AVG(SUELDO),3)  FROM RECURSOS.EMPLEADO
+WHERE SUELDO IS NOT NULL
+GROUP BY IDDEPARTAMENTO
+
+/ *9 Desarrolle una sentencia SELECT para encontrar el importe recaudado por curso. 
+Esquema EDUCA. */
+
+SELECT CUR_ID , SUM(PAG_IMPORTE) 
+FROM EDUCA.PAGO
+GROUP BY CUR_ID;
+
+/* 10Se necesita saber el sueldo máximo, sueldo mínimo y el sueldo promedio por 
+departamento. Esquemas SCOTT y RH. */
+
+SELECT DEPTNO,MAX(SAL) SUELDO_MAXIMO, MIN(SAL) SUELDO_MINIMO, ROUND(AVG(SAL),2) SUELDO_PROMEDIO
+FROM SCOTT.EMP
+WHERE SAL IS NOT NULL
+GROUP BY DEPTNO;
+
+SELECT IDDEPARTAMENTO,MAX(SUELDO) SUELDO_MAXIMO, MIN(SUELDO) SUELDO_MINIMO, ROUND(AVG(SUELDO),2) SUELDO_PROMEDIO
+FROM RECURSOS.EMPLEADO
+WHERE SUELDO IS NOT NULL
+GROUP BY IDDEPARTAMENTO;
+ 
+/*11Se necesita saber cuántos empleados hay por departamento. Esquemas SCOTT y RH. */
+
+SELECT DEPTNO,COUNT(*) FROM SCOTT.EMP
+WHERE DEPTNO IS NOT NULL
+GROUP BY DEPTNO
+
+SELECT IDDEPARTAMENTO,COUNT(*)   FROM RECURSOS.EMPLEADO
+WHERE IDDEPARTAMENTO  IS NOT NULL
+GROUP BY IDDEPARTAMENTO
+
+--13. De cada departamento se necesita saber la cantidad de empleados, el importe de la planilla y el sueldo promedio. Esquemas SCOTT y RH.
+SELECT DEPTNO as Departamento, COUNT(*) as Empleados, SUM(SAL) AS "IMPORTE PLANILLA", ROUND(AVG(SAL),3) AS "SUELDO PROMEDIO"  FROM SCOTT.EMP GROUP BY DEPTNO;
+SELECT IDDEPARTAMENTO as Departamento, COUNT(*) as Empleados, SUM(SUELDO) AS "IMPORTE PLANILLA", ROUND(AVG(SUELDO),3) AS "SUELDO PROMEDIO"  FROM RECURSOS.EMPLEADO GROUP BY IDDEPARTAMENTO;
+
+--14. De cada curso se necesita saber la cantidad de alumnos matriculados y el importe que se tiene proyectado recaudar por los alumnos matriculados. Esquema EDUCA.
+SELECT 
+	CUR_ID AS "CODIGO CURSO", 
+	COUNT(*) AS "CANTIDAD DE ALUMNOS", 
+	SUM(MAT_PRECIO) "IMPORTE PROYECTADO" 
+FROM EDUCA.MATRICULA  GROUP BY  CUR_ID;
+
+
+
+

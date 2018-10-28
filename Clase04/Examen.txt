@@ -1,0 +1,6 @@
+Presentar un Caso
+- Explicar
+- Modelar el caso
+- Crear el esquema con datos
+- Preparar 20 requerimientos y resolverlos
+  aplicando JOIN, Grupos, subconsultas, WITH, etc.

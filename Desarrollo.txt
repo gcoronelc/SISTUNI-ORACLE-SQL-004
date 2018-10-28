@@ -24,6 +24,14 @@ CLASE 02
 - Bloque 05: Operadores Especiales
 - Bloque 06: Valores nulos Nulos
 - Bloque 07: Fechas y Hora
+- Bloque 08: Funciones Agregadas
+- Bloque 09: Group By
+- Bloque 10: HAVING
+
+
+
+
+
 
 
 
