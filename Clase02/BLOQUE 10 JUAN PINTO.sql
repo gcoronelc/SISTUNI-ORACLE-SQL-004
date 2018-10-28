@@ -1,0 +1,57 @@
+--BLOQUE 10
+--FILTRO DE GRUPOS: HAVING
+
+15. Desarrolle una sentencia SELECT para encontrar los departamentos que tienen a lo
+más de 3 trabajadores. Esquemas SCOTT y HR.
+--SCOTT
+SELECT DEPTNO,COUNT(1)
+FROM SCOTT.EMP 
+WHERE SAL IS NOT NULL
+GROUP BY DEPTNO
+HAVING COUNT(1)<=3;
+
+
+--RECURSOS
+SELECT IDDEPARTAMENTO,COUNT(1)  
+FROM RECURSOS.EMPLEADO
+WHERE SUELDO IS NOT NULL
+GROUP BY IDDEPARTAMENTO
+HAVING COUNT(1)<=3;
+
+
+16. Se necesita saber cuáles son los puestos de trabajo que tienen más de 2 empleados.
+Esquemas SCOTT y HR
+
+
+--SCOTT
+SELECT JOB,COUNT(1)
+FROM SCOTT.EMP 
+GROUP BY JOB
+HAVING COUNT(1)>2;
+
+
+--RECURSOS
+SELECT IDCARGO,COUNT(1)  
+FROM RECURSOS.EMPLEADO
+GROUP BY IDCARGO
+HAVING COUNT(1)>2;
+
+
+17. Se necesita saber que empleados han registrado menor de 5 movimientos. Esquema
+EUREKA.
+
+
+SELECT CHR_EMPLCODIGO,COUNT(1)   
+FROM eureka.MOVIMIENTO
+GROUP BY CHR_EMPLCODIGO
+HAVING COUNT(1)<5;
+
+
+
+
+
+
+
+
+
+
