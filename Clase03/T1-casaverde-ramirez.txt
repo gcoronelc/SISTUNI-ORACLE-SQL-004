@@ -1,0 +1,4 @@
+SELECT e.empno, e.ename , e.SAL, s.grade
+FROM scott.SALGRADE s
+INNER JOIN  scott.emp e
+ON e.sal >= s.LOSAL AND e.sal <= s.HISAL;
