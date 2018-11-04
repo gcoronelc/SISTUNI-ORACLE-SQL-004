@@ -54,7 +54,7 @@ JOIN (
 ON D.IDDEPARTAMENTO = T.IDDEPARTAMENTO;
 
 
--- T3
+-- T3 - EDUCA
 -- Se necesita una consulta que permita obtener
 -- la información resumen de el avance de las 
 -- matriculas, del importe proyectado, el importe 
@@ -71,4 +71,23 @@ CURSO      CURSO    MATRICULADOS    PROYECTADO  COMPROMETIDO   RECAUDADO
 ------------------------------------------------------------------------------
 
 */
+
+SELECT * FROM EDUCA.MATRICULA;
+
+SELECT * FROM EDUCA.CURSO;
+
+SELECT * FROM EDUCA.PAGO;
+
+SELECT 
+	C.CUR_ID, C.CUR_NOMBRE,C.CUR_MATRICULADOS, 
+	C.CUR_PRECIO PROYECTADO , COMPROMETIDO, RECAUDADO
+FROM EDUCA.CURSO C
+LEFT JOIN ( SELECT N.CUR_ID, SUM(MAT_PRECIO ) COMPROMETIDO 
+			FROM EDUCA.MATRICULA N GROUP BY N.CUR_ID) M 
+ON M.CUR_ID=C.CUR_ID
+LEFT JOIN ( SELECT P.CUR_ID, SUM(PAG_IMPORTE) RECAUDADO 
+			FROM EDUCA.PAGO  P GROUP BY P.CUR_ID) E
+ON E.CUR_ID=C.CUR_ID
+ORDER BY CUR_ID;
+
 

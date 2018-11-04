@@ -1,0 +1,19 @@
+create table RECURSOS.test
+(
+	id CHAR(5) primary key,
+	name varchar2(20),
+ 	salary number(8,2)
+);
+
+SELECT * FROM RECURSOS.TEST;
+
+
+insert into RECURSOS.test (id, name, salary)
+select IDEMPLEADO, NOMBRE, SUELDO
+from RECURSOS.EMPLEADO
+where IDDEPARTAMENTo = 100;
+
+SELECT * FROM RECURSOS.TEST;
+
+COMMIT;
+
