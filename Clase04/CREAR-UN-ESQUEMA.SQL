@@ -6,11 +6,11 @@
 
 -- Crear el Tablespace
 CREATE TABLESPACE TBS_VENTAS
-DATAFILE 'E:\APP\TS\DF_VENTAS.DBF'
+DATAFILE 'H:\APP\TBS\DF_VENTAS.DBF'
 SIZE 10M;
 
 CREATE TABLESPACE TBS_VENTAS2
-DATAFILE 'E:\APP\TS\DF_VENTAS2.DBF'
+DATAFILE 'H:\APP\TBS\DF_VENTAS2.DBF'
 SIZE 10M;
 
 
@@ -19,7 +19,7 @@ SELECT
 	tablespace_name,
 	round(sum(BYTES/1024/1024),0) ESPACIO_MB
 FROM dba_data_files b
-WHERE tablespace_name LIKE 'TBS%'
+WHERE tablespace_name LIKE 'TBS_VEN%'
 GROUP BY b.tablespace_name
 ORDER BY 1;
 
@@ -28,7 +28,7 @@ SELECT
 	tablespace_name,
 	ROUND(sum(BYTES/1024/1024),0)  ESPACIO_MB
 FROM dba_free_space
-WHERE tablespace_name LIKE 'TBS%'
+WHERE tablespace_name LIKE 'TBS_VEN%'
 GROUP BY tablespace_name
 ORDER BY 1;
 
@@ -87,7 +87,7 @@ CREATE TABLE VENTASAPP.PRODUCTO(
 ) TABLESPACE TBS_VENTAS2;
 
 
-DROP TABLE VENTASAPP.VENTAS PURGE;
+-- DROP TABLE VENTASAPP.VENTAS PURGE;
 
 CREATE TABLE VENTASAPP.VENTAS(
   VEN_ID      NUMBER(8) NOT NULL,
@@ -109,6 +109,8 @@ segment_type, tablespace_name,bytes,initial_extent,
 next_extent, PCT_INCREASE, extents, max_extents
 from dba_segments
 Where OWNER='VENTASAPP';
+
+
 
 -- =========================================
 -- 06: OTRAS RESTRICCIONES
@@ -135,6 +137,7 @@ VALUES(1, 'GUSTAVO', SYSDATE, 1, 70, 8, 560.0 );
 
 COMMIT;
 
+SELECT * FROM VENTASAPP.VENTAS;
 
 
 
