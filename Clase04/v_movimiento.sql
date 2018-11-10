@@ -7,11 +7,12 @@
 
 
 create or replace view v_movimiento(
-sucucodigo, sucunombre, cliecodigo, cliepaterno,
-cliematerno, clienombre, cuencodigo, cuensaldo,
-cuenestado, movinumero, movifecha, moviimporte,
-cuenreferencia, tipocodigo, tiponombre, tipoaccion,
-monecodigo, monenombre)
+	sucucodigo, sucunombre, cliecodigo, cliepaterno,
+	cliematerno, clienombre, cuencodigo, cuensaldo,
+	cuenestado, movinumero, movifecha, moviimporte,
+	cuenreferencia, tipocodigo, tiponombre, tipoaccion,
+	monecodigo, monenombre
+)
 as
 select 
   su.chr_sucucodigo  sucucodigo,
@@ -72,5 +73,4 @@ group by cuencodigo, cuensaldo;
 
 
 SELECT * FROM v_resumen;
-
 
