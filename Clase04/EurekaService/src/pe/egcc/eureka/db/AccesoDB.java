@@ -14,7 +14,7 @@ public final class AccesoDB {
     try {
       // Parámetros
       String driver = "oracle.jdbc.OracleDriver";
-      String urlDB = "jdbc:oracle:thin:@localhost:1521/orcl.uni.edu.pe";
+      String urlDB = "jdbc:oracle:thin:@172.17.2.45:1521/ORCL";
       String user = "eureka";
       String pass = "admin";
       // Cargar el driver
