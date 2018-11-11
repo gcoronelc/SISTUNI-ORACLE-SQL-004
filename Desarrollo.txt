@@ -43,6 +43,8 @@ CLASE 03
 CLASE 04
 ==================================================
 - Demostración de Transacciones
+- Creación de Esquemas
+- Vistas
 
 
 
